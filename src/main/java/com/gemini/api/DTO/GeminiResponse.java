@@ -1,5 +1,5 @@
 package com.gemini.api.DTO;
 
-public record GeminiResponse(String response) {
-    
-}
+import java.util.List;
+
+public record GeminiResponse(List<NodeDto> nodes, List<EdgeDto> edges){}
