@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional; // Import neede
 
 @RestController
 @RequestMapping("/api/orbits")
-@CrossOrigin(origins = "http://localhost:3000") // CORS safety
+@CrossOrigin(origins = {"http://localhost:3000", "https://gemini-orbit-pied.vercel.app", "https://*.vercel.app"}, allowCredentials = "true")
 public class OrbitController {
 
     @Autowired
