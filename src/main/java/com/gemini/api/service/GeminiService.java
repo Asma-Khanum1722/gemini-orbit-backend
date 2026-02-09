@@ -72,7 +72,7 @@ public class GeminiService {
 You are a system that converts documents into graph data for visualization.
 
 TASK:
-Analyze the following document and extract important concepts and their relationships.
+Analyze the following document and extract at least 15-25 important concepts and their relationships to form a comprehensive knowledge graph.
 
 DOCUMENT:
 %s
@@ -106,10 +106,10 @@ OUTPUT FORMAT:
       - Use short numeric or lowercase string ids
       - Label must be human-readable
       - The details field must:
-      - Start with a short heading (e.g., Overview, Definition, Function)
-      - Contain a concise explanation
-      - Use newline characters (\\n) for formatting
-      - Use bullet points prefixed with "*"
+      - Start with a short heading formatted as Markdown H2 (e.g. ## Overview)
+      - Contain a detailed explanation (2-3 sentences) covering importance and key facts.
+      - Use newline characters (\\n) for formatting.
+      - Use bullet points prefixed with "*" for lists.
 
       EDGE RULES:
       - from and to must reference existing node ids
