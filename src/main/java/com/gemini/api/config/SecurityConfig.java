@@ -16,7 +16,10 @@ public class SecurityConfig {
             // 1. CORS: Allow your Frontend (localhost:3000) to talk to this Backend
             .cors(cors -> cors.configurationSource(request -> {
                 var config = new CorsConfiguration();
-                config.setAllowedOrigins(List.of("http://localhost:3000"));
+                config.setAllowedOrigins(List.of(
+                    "http://localhost:3000",
+                    "https://gemini-orbit-pied.vercel.app"
+                ));
                 config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                 config.setAllowedHeaders(List.of("*"));
                 return config;
