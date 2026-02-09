@@ -1,6 +1,7 @@
 package com.gemini.api.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import com.gemini.api.service.GeminiService;
 
 @RestController
 @RequestMapping("/api/gemini")
+@CrossOrigin(origins = "http://localhost:3000")
 public class GeminiController {
     
     private final GeminiService geminiService;
