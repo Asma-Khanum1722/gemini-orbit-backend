@@ -21,6 +21,8 @@ RUN chmod +x mvnw
 # Skip tests to speed up the build
 RUN ./mvnw clean package -DskipTests
 
+EXPOSE 8080
+
 # Run the jar file
 # We use a wildcard to find the jar since the version might change
 CMD ["java", "-jar", "target/geminiapi-0.0.1-SNAPSHOT.jar"]
